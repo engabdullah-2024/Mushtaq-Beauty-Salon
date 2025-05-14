@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+}
