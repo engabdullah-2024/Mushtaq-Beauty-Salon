@@ -1,25 +1,26 @@
-// App.js
+// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
 import Home from './pages/Home';
-import Services from './pages/Services';
+
+import Header from './components/Header';
+import SurahCard from './components/SurahCard ';
+import SearchBar from './components/SearchBar ';
+import Surah from './pages/Surah ';
+
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100">
-        <Header /> {/* Header now appears on all pages */}
-        
-        <div className="container mx-auto px-4 py-20">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="services" element={<Services />} />
-            {/* Add other routes here - Header will stay persistent */}
-          </Routes>
-        </div>
-        
-        {/* Footer would go here if you had one */}
+      <div className="bg-gray-100 min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/surahcard" element={<SurahCard />} />
+          <Route path="/search" element={<SearchBar />} />
+          <Route path="/surah/:number" element={<Surah />} />
+         
+        </Routes>
       </div>
     </Router>
   );
