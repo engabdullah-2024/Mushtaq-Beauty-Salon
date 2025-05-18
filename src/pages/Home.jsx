@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 
 import SurahCard from '../components/SurahCard '
 import SearchBar from '../components/SearchBar '
+import Hero from './Hero';
 
 const Home = () => {
   const [surahs, setSurahs] = useState([])
@@ -23,7 +24,7 @@ const Home = () => {
 
   return (
     <div>
-      
+      <Hero/>
       <div className="max-w-6xl mx-auto px-4 py-10">
         <SearchBar search={search} setSearch={setSearch} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
